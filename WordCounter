@@ -1,0 +1,23 @@
+package wordcounter;
+
+public class WordCounter 
+{
+
+    public static void main(String[] args) 
+    {
+        int wordCount = 0;
+        String input = "We elves try to stick to the four main food groups:"
+                + " candy, candy canes, candy corns, and syrup!";
+        String temp = input;
+        int loc = temp.indexOf(' ');
+        while (loc >= 0)
+        {
+            wordCount++;
+            temp = temp.substring(loc + 1);
+            loc = temp.indexOf(' '); 
+        }
+        wordCount++;
+        System.out.print("There are " + wordCount + " words in this quote.");
+    }
+    
+}
